@@ -1,0 +1,147 @@
+@font-face{
+    font-family: MyFont;
+    src: url(newsletter-sign-up-with-success-message-main/assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face{
+    font-family: MyFontBold;
+    src: url(newsletter-sign-up-with-success-message-main/assets/fonts/Roboto-Bold.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: MyFont;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(234, 29%, 20%);
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    width: 800px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.right{
+    width: 60%;
+}
+
+.left{
+    width: 40%;
+}
+
+.left img{
+    width: 100%;
+}
+
+h1{
+    font-family: MyFontBold;
+    font-size: 45px;
+}
+
+ul{
+    list-style-image: url(newsletter-sign-up-with-success-message-main/assets/images/icon-list.svg);
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+label{
+    margin-bottom: 10px;
+}
+
+input{
+    font-family: inherit;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid hsl(231, 7%, 60%);
+}
+
+button{
+    font-family: inherit;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: hsl(235, 18%, 26%);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(4, 100%, 67%);
+    transition: all 0.5s;
+}
+
+.hidden{
+    display: none;
+}
+
+.container-2{
+    background-color: white;
+    width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.container-2 img{
+    width: 50px;
+}
+
+.container-2 button{
+    width: 100%;
+}
+
+@media (max-width: 768px){
+    .container{
+        flex-direction: column-reverse;
+        width: 95%;
+        padding: 0;
+    }
+
+    body{
+        padding: 0;
+        margin: 0;
+    }
+
+    .container h1{
+        font-size: 30px;
+    }
+
+    .right{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    .left img{
+        content: url(newsletter-sign-up-with-success-message-main/assets/images/illustration-sign-up-mobile.svg);
+    }
+
+    form{
+        width: 90%;
+    }
+
+    .container-2{
+        min-height: 100vh;
+    }
+}
