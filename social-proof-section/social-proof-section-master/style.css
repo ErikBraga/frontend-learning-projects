@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(images/bg-pattern-top-desktop.svg) no-repeat, url(images/bg-pattern-bottom-desktop.svg) no-repeat;
+    background-position: left top, right bottom;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    padding-top: 100px;
+}
+
+/* container */
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.primary__grid{
+    display: grid;
+    grid-template-rows: repeat(2, 300px);
+    place-items: center;
+}
+
+/* top */
+.top__grid{
+    display: grid;
+    grid-template-columns: 300px 400px;
+    column-gap: 140px;
+    margin-top: 2rem;
+}
+
+.primary__content h1{
+    font-weight: 700;
+    color: #521E4F;
+    margin-bottom: 1rem;
+}
+
+.primary__content p{
+    color: #937B92;
+}
+
+/* ratings */
+.rating{
+    background-color: #F8F2F9;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+}
+
+.rating p{
+    margin-left: 15px;
+    color: #521E4F;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.rating-2{
+    /* por causa do position: relative conseguimos tirar esse elemento do container usando left */
+    left: 2rem;
+}
+
+.rating-3{
+    left: 4rem;
+}
+
+/* bottom */
+.bottom__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 10px;
+}
+
+/* review */
+.user__review{
+    background-color: #521E4F;
+    border-radius: 10px;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 10px;
+    color: #FFF;
+    position: relative;
+}
+
+.user__review p{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    font-weight: 400;
+}
+
+.review-2{
+    top: 2rem;
+}
+
+.review-3{
+    top: 4rem;
+}
+
+.user__details{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.user__details img{
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.info{
+    font-weight: 500;
+}
+
+.verified{
+    font-size: 0.7rem;
+    color: #ee68a4;
+}
+
+@media screen and (max-width: 768px){
+    .primary__grid{
+        grid-template-rows: 1fr;
+    }
+
+    .top__grid{
+        grid-template-columns: 1fr;
+    }
+
+    .ratings{
+        margin: 20px 0;
+    }
+
+    .rating{
+        flex-direction: column;
+    }
+
+    .rating .stars{
+        margin-bottom: 5px;
+    }
+
+    .rating-2, .rating-3{
+        left: unset;
+    }
+
+    .review-2, .review-3{
+        top: unset;
+    }
+}
